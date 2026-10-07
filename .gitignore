@@ -1,0 +1,25 @@
+## Ignore build results
+bin/
+obj/
+out/
+
+## .NET
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+_TestResults/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+tests/.tools/
+src/AcxiomCRM.Web/acxiomcrm.db
+
+## Publish output
+**/Properties/PublishProfiles/
+
+## OS
+.DS_Store
+Thumbs.db
