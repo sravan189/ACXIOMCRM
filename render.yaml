@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: acxiomcrm-demo
+    runtime: docker
+    plan: free
+    healthCheckPath: /Account/Login
+    envVars:
+      - key: DatabaseProvider
+        value: Sqlite
+      - key: ConnectionStrings__Sqlite
+        value: Data Source=/tmp/acxiomcrm.db
