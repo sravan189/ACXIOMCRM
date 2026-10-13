@@ -10,5 +10,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/publish ./
 ENV ASPNETCORE_FORWARDEDHEADERS_ENABLED=true
+ENV DatabaseProvider=Sqlite
+ENV ConnectionStrings__Sqlite="Data Source=/tmp/acxiomcrm.db"
 EXPOSE 10000
 ENTRYPOINT ["sh", "-c", "dotnet AcxiomCRM.Web.dll --urls http://0.0.0.0:${PORT:-10000}"]
